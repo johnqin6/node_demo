@@ -34,3 +34,19 @@ http.get(url, function(res){
     });
 });
 
+
+const fs = require('fs');
+//读取图片
+let bitmap = fs.readFileSync('./image/follow_img.png');
+
+// node v10 不建议使用buffer的方式，所以这里使用了新的API Buffer.from;
+let base64str = Buffer.from(bitmap, 'binary').toString('base64'); //base64编码
+
+let bitmap1 = Buffer.from(base64str, 'base64'); //解码图片
+
+//写入图片
+fs.writeFileSync('end.jpg', bitmap1);
+
+//node接收post上传的图片时，发现有时curl上传过程中把base64 编码中' +'变成了空格，
+// 这里要替换回来才能正确解码
+var base64Data = imgData.replace(/\s/g,"+");
