@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>目录列表</title>
+    <style>
+        .dir-list {
+            width: 600px;
+            padding-left: 30px;
+        }
+        .dir-item {
+            display: flex;
+            position: relative;
+            height: 40px;
+            padding-left: 40px;
+            line-height: 40px;
+            font-size: 16px;
+        }
+        .dir-item::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 0;
+            width: 24px;
+            height: 24px;
+        }
+        .dir::before {
+            background: url('www/img/folder.png') no-repeat;
+            background-size: 100%;
+        }
+        .file::before {
+            background: url('www/img/file.png') no-repeat;
+            background-size: 100%;
+        }
+        .info {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>目录列表</h1>
+    <hr/>
+    <ul class="dir-list">
+        <li class="dir-item">
+            <span class="info">名称</span>
+            <span class="info">大小</span>
+            <span class="info">修改时间</span>
+        </li>
+        ^_^
+    </ul>
+</body>
+</html>
