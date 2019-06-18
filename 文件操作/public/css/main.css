@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.title {
+    line-height: 40px;
+    text-align: center;
+}
+.add-btn {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    line-height: 30px;
+    background-color: cyan;
+    text-align: center;
+    color: #fff;
+    margin-left: 40%;
+}
+table {
+    border: 1px solid #999;
+    margin: 30px auto;
+}
+.row {
+    width: 500px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+.col {
+    width: 100px;
+    border: 1px solid #999;
+}
