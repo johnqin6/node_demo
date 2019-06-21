@@ -12,7 +12,9 @@
     <header>
         <h3 class="title">学生管理系统</h3>
         <p>
-            <span class="add-btn">添加</span>
+            <span class="add-btn">
+                <a href="/new">添加</a>
+            </span>
         </p>
     </header>
     <table>
@@ -29,8 +31,8 @@
             <td class="col">{{$value.gender}}</td>
             <td class="col">{{$value.age}}</td>
             <td class="col">读书，睡觉</td>
-            <td class="col">编辑</td>
-            <td class="col">删除</td>
+            <td class="col"><a href="/edit?id={{$value.id}}">编辑</a></td>
+            <td class="col"><a href="/delete?id={{$value.id}}">删除</a></td>
         </tr>
         {{/each}}
     </table>

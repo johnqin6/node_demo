@@ -8,6 +8,10 @@ let app = new express();
 app.use(express.static('public'));
 //配置art-template模板
 app.engine('html', require('express-art-template'));
+// parse application/x-www-form-urlencoded
+app.use(express.urlencoded({extended: false}));
+// parse application/json
+// app.use(express.json())
 
 //5. 把路由容器挂载在 app 服务上
 app.use(router);
